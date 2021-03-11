@@ -8,14 +8,14 @@ set -ex
 
 [ -n "$1" ] || ( echo "Install dir missing"; exit 1 )
 
-sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-sudo add-apt-repository -y ppa:george-edison55/cmake-3.x
-sudo add-apt-repository -y ppa:chris-lea/libsodium
-sudo add-apt-repository -y ppa:sickpig/boost
+add-apt-repository -y ppa:ubuntu-toolchain-r/test
+add-apt-repository -y ppa:george-edison55/cmake-3.x
+add-apt-repository -y ppa:chris-lea/libsodium
+add-apt-repository -y ppa:sickpig/boost
 
-sudo apt-get update
+apt-get update
 
-sudo apt-get install -y \
+apt-get install -y \
     autoconf \
     binutils-dev \
     bison \
@@ -50,7 +50,7 @@ sudo apt-get install -y \
     ragel \
     software-properties-common
 
-# sudo apt-get upgrade -yq cmake
+# apt-get upgrade -yq cmake
 
 cd "$(dirname "$0")" || ( echo "cd fail"; exit 1 )
 
